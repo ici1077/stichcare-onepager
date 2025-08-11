@@ -1,54 +1,220 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>StichCare – Instant Relief & Protection from Insect Bites</title>
-<meta name="description" content="Dual-action: disinfects, soothes and repels. Instant relief plus protective barrier against new bites." />
-<style>
-:root{--bg:#0b1220;--card:#111a27;--text:#e6eef9;--muted:#9aa7bf}
-*{box-sizing:border-box} html,body{margin:0}
-body{font:16px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);
-  background:radial-gradient(1200px 600px at 10% -10%,rgba(34,197,94,.15),transparent 60%),#0b1220}
-.wrap{max-width:1000px;margin:0 auto;padding:28px}
-.card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;box-shadow:0 10px 35px rgba(0,0,0,.35)}
-.hero{display:grid;gap:14px;padding:26px;border:1px solid #172554;background:linear-gradient(160deg,rgba(2,6,23,.2),transparent)}
-.tag{display:inline-block;padding:6px 10px;border:1px solid #2a3345;border-radius:999px;background:#052e16;color:#9be7a5;font:600 12px/1 system-ui}
-h1{margin:0;font-size:clamp(26px,4vw,36px);line-height:1.1}
-.muted{color:var(--muted)} .cta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
-.btn{padding:.85rem 1rem;border-radius:12px;border:1px solid #163a4a;text-decoration:none;color:inherit}
-.btn.primary{background:linear-gradient(160deg,#10b981,#059669);border-color:#0ea5a3}
-.btn.ghost{background:transparent;border-color:#334155}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
-@media (max-width:760px){.grid{grid-template-columns:1fr}}
-.card-sm{padding:18px;border:1px solid #1f2937;border-radius:12px}
-.card-sm h3{margin:0 0 6px;font-size:17px} .card-sm p{margin:0;color:var(--muted);font-size:15px}
-footer{padding:16px;text-align:center;color:#90a3bf;font-size:13px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StichCare – Instant Relief for Insect Bites</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="StichCare – Dual-action formula that disinfects and soothes insect bites. Fast, lasting relief within seconds. Safe for kids & sensitive skin." />
+  <meta property="og:title" content="StichCare – Instant Relief for Insect Bites" />
+  <meta property="og:description" content="Dual-action: disinfection + skin soothing. Quick, reliable relief within seconds." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root{
+      --bg: #08131f;
+      --bg2:#0b1220;
+      --ink:#e8f1ff;
+      --muted:#a8b2c2;
+      --brand:#10b981;   /* green accent */
+      --brand2:#22d3ee;  /* teal accent */
+      --chip:#f59e0b;    /* warm accent */
+      --card:#0f172a;    /* panel */
+      --ring: rgba(255,255,255,.12);
+      --shadow: 0 24px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at 10% 10%, rgba(34,211,238,.08), transparent 70%),
+        radial-gradient(900px 600px at 85% 15%, rgba(16,185,129,.08), transparent 70%),
+        linear-gradient(180deg, #0c1224 0%, #060b15 100%);
+    }
+
+    a{color:var(--brand2); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:1100px; margin:0 auto; padding:24px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:8px 0 20px;
+    }
+    .logo{
+      display:flex; align-items:center; gap:12px; letter-spacing:.4px; font-weight:700;
+    }
+    .logo_mark{
+      width:40px; height:40px; border-radius:12px; display:grid; place-items:center;
+      background: radial-gradient(70% 70% at 30% 20%, #0ea5e9, #22d3ee);
+      box-shadow: 0 6px 18px rgba(34,211,238,.35) inset, 0 4px 14px rgba(0,0,0,.35);
+      border:1px solid var(--ring);
+    }
+    .logo_mark svg{width:24px; height:24px; opacity:.95}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:600;
+      padding:6px 10px; border-radius:999px; color:#0c0e14;
+      background: linear-gradient(180deg, #fbd38d, #f59e0b);
+      border:1px solid rgba(0,0,0,.1);
+    }
+
+    .hero{
+      display:grid; grid-template-columns: 1.1fr 1fr; gap:20px; align-items:center;
+      background: linear-gradient(180deg, #0d1428, #0c1326);
+      border:1px solid var(--ring);
+      border-radius: var(--radius);
+      padding:28px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    @media (max-width:900px){ .hero{grid-template-columns:1fr; padding:22px} }
+
+    .tag{
+      display:inline-block; letter-spacing:.2px; font-weight:700; font-size:12px;
+      color:#06241f; background:linear-gradient(180deg, #34d399, #10b981);
+      padding:7px 12px; border-radius:999px; border:1px solid rgba(0,0,0,.12)
+    }
+    h1{
+      margin:10px 0 6px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.08;
+    }
+    .lead{
+      margin:0 0 16px; color:var(--muted); font-size: clamp(16px, 2.2vw, 18px);
+    }
+
+    .cta{ display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 6px }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 18px; font-weight:700; border-radius:12px; border:1px solid var(--ring);
+      background: linear-gradient(180deg, #34d399, #10b981);
+      color:#06241f;
+      box-shadow: 0 8px 26px rgba(16,185,129,.35);
+    }
+    .btn:hover{ transform: translateY(-1px) }
+    .btn.ghost{
+      background: transparent; color:var(--ink);
+      border:1px solid var(--ring);
+    }
+
+    /* Illustration card (replacing external image) */
+    .art{
+      aspect-ratio: 16/11; width:100%;
+      border-radius: 16px; border:1px solid var(--ring); overflow:hidden;
+      background: radial-gradient(120% 120% at 10% 10%, rgba(34,211,238,.15), transparent 55%),
+                  radial-gradient(120% 120% at 90% 15%, rgba(16,185,129,.15), transparent 55%),
+                  linear-gradient(180deg, #0b1532, #0a122b 70%, #081021);
+      position:relative;
+      box-shadow: var(--shadow);
+    }
+    .art .stamp{
+      position:absolute; inset:0; display:grid; place-items:center; padding:18px;
+    }
+    .art h2{
+      margin:0 0 6px; font-size: clamp(22px, 3vw, 32px);
+    }
+    .art h3{
+      margin:0; font-size: clamp(15px, 2.2vw, 20px); font-weight:700; color:var(--ink);
+    }
+    .art small{ color:var(--muted) }
+
+    /* faint decorations */
+    .bubbles svg{ position:absolute; opacity:.22; filter: blur(0px) }
+    .bubbles .b1{ left:-40px; top:-40px; width:280px; height:280px }
+    .bubbles .b2{ right:-30px; top:20px; width:220px; height:220px }
+    .bubbles .b3{ right:-50px; bottom:-60px; width:300px; height:300px }
+
+    .section{ margin:36px 0 10px }
+    .grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:18px }
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+
+    .card{
+      background: linear-gradient(180deg, #0e1834, #0b142b);
+      border:1px solid var(--ring); border-radius: 14px; padding:18px;
+    }
+    .card h3{ margin:0 0 6px }
+    .muted{ color:var(--muted) }
+
+    footer{ color:var(--muted); font-size:14px; margin:22px 0 10px }
+  </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="hero card">
-      <span class="tag">Dual-action: Disinfection • Skin Soothing • Insect Repellent</span>
-      <h1>StichCare – Instant Relief & Protection from Mosquito & Insect Bites</h1>
-      <p><strong>by Ivica Vasiljevic – Innovative Product</strong></p>
-      <p class="muted">Fast-acting topical solution that disinfects and soothes existing bites while forming a protective layer to help <strong>repel future bites</strong>. Noticeable comfort within seconds.</p>
-      <div class="cta">
-        <a class="btn primary" href="mailto:ici77@live.at?subject=StichCare%20Inquiry">Contact / Request info</a>
-        <a class="btn ghost" href="#benefits">See benefits</a>
+
+    <!-- Top bar -->
+    <div class="nav">
+      <div class="logo">
+        <div class="logo_mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M5 12a7 7 0 0 1 14 0" stroke="white" stroke-width="2" opacity=".9"/>
+            <path d="M12 6v12" stroke="white" stroke-width="2" opacity=".9"/>
+            <circle cx="12" cy="12" r="2.6" fill="white"/>
+          </svg>
+        </div>
+        <div>
+          StichCare <span class="chip">Innovative Bite Relief</span>
+        </div>
+      </div>
+      <a class="muted" href="#benefits">Benefits</a>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <span class="tag">Dual-action: Disinfection + Skin Soothing</span>
+        <h1>Instant Relief for Mosquito & Insect Bites</h1>
+        <p class="lead">
+          Fast-acting topical solution based on a trusted disinfectant base, boosted with
+          skin-calming and hydrating agents. Relief within seconds. Safe for kids & sensitive skin.
+        </p>
+        <div class="cta">
+          <a class="btn" href="mailto:ici77@live.at?subject=StichCare%20Inquiry">Contact / Request info</a>
+          <a class="btn ghost" href="#benefits">See benefits</a>
+        </div>
+      </div>
+
+      <!-- “Erstes Bild” – als integrierte, leichte SVG-Grafik im selben Look -->
+      <div class="art" role="img" aria-label="Apply StichCare — Dual-action: Disinfection + Skin Soothing">
+        <div class="bubbles">
+          <svg class="b1" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="#22d3ee"/></svg>
+          <svg class="b2" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="#10b981"/></svg>
+          <svg class="b3" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="#22d3ee"/></svg>
+        </div>
+        <div class="stamp">
+          <div style="text-align:center; max-width: 540px">
+            <h2>Apply <span style="background:linear-gradient(180deg,#34d399,#10b981); -webkit-background-clip:text; color:transparent">StichCare</span></h2>
+            <h3>Dual-action formula:<br/>Disinfection + Skin Soothing</h3>
+            <small>Immediate comfort • Protective finish • Anytime, anywhere</small>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div id="benefits" class="grid">
-      <div class="card-sm card"><h3>Immediate relief</h3><p>Reduces itching, swelling & redness within seconds.</p></div>
-      <div class="card-sm card"><h3>Protective repellent</h3><p>Helps prevent new bites with a skin-safe barrier.</p></div>
-      <div class="card-sm card"><h3>Skin-friendly</h3><p>Soothing & moisturizing agents for sensitive skin.</p></div>
-      <div class="card-sm card"><h3>Proven base</h3><p>Built on a widely used antiseptic hand-rub foundation.</p></div>
-      <div class="card-sm card"><h3>Kids & adults</h3><p>Safe for children; suitable for all skin types.</p></div>
-      <div class="card-sm card"><h3>Manufacturing-ready</h3><p>Simple to produce and integrate into product lines.</p></div>
+    <!-- BENEFITS -->
+    <div id="benefits" class="section">
+      <div class="grid">
+        <div class="card">
+          <h3>Immediate relief</h3>
+          <p class="muted">Reduces itching, swelling & redness within seconds; protects sensitive skin.</p>
+        </div>
+        <div class="card">
+          <h3>Proven base</h3>
+          <p class="muted">Built on a widely used disinfectant hand-rub foundation; predictable, reliable.</p>
+        </div>
+        <div class="card">
+          <h3>Family-friendly</h3>
+          <p class="muted">Suitable for kids & adults; non-pharma route possible depending on market.</p>
+        </div>
+      </div>
     </div>
 
-    <footer>© 2025 Ivica Vasiljevic · StichCare Innovations · Regulatory claims (incl. repellent) depend on final formula & market.</footer>
+    <footer>
+      © StichCare Innovations — Ivica Vasiljevic. Regulatory pathway depends on market & final composition.
+    </footer>
   </div>
 </body>
 </html>
