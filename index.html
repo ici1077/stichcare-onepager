@@ -7,81 +7,63 @@
   <meta name="description" content="StichCare von Ivica Vasiljevic – Dual-Action: Desinfektion + Hautberuhigung. Schnelle Linderung in Sekunden und vorbeugender Schutz gegen neue Insektenstiche." />
   <meta name="theme-color" content="#001220" />
 
-  <!-- Social / Preview -->
+  <!-- Social Preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="StichCare – Soforthilfe & Schutz" />
-  <meta property="og:description" content="Schnelle Linderung + Schutz: Desinfiziert, beruhigt die Haut und wirkt vorbeugend gegen neue Insektenstiche." />
-  <meta property="og:image" content="stichcare-hero.png?v=3" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:description" content="Desinfiziert, beruhigt & schützt – schnelle Linderung in Sekunden, vorbeugend gegen neue Stiche." />
+  <meta property="og:image" content="stichcare-hero.png?v=4" />
   <meta property="og:url" content="https://ici1077.github.io/stichcare-onepager/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="StichCare – Soforthilfe & Schutz" />
-  <meta name="twitter:description" content="Desinfiziert, beruhigt & schützt – schnelle Linderung in Sekunden, vorbeugend gegen neue Stiche." />
-  <meta name="twitter:image" content="stichcare-hero.png?v=3" />
 
   <style>
     :root{
       --bg:#001220; --ring:#0f162d; --card:#0b1220; --muted:#93a4bf;
-      --accent:#22e56e; --brand:#56c1dd; --ink:#e6f3ff; --warn:#163a4a;
-      --shadow: 0 30px 60px rgba(0,0,0,.35);
-      --radius:16px;
+      --accent:#22e56e; --ink:#e6f3ff; --brand:#56c1dd;
+      --shadow:0 26px 54px rgba(0,0,0,.34); --radius:16px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:
-      radial-gradient(1200px 700px at 20% 20%, rgba(20,165,233,.12),transparent 60%),
-      radial-gradient(900px 600px at 80% 60%, rgba(84,197,154,.10),transparent 55%),
-      #001220; color:var(--ink); font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
+      radial-gradient(1200px 700px at 18% 18%, rgba(20,165,233,.12),transparent 60%),
+      radial-gradient(900px 580px at 80% 65%, rgba(84,197,154,.10),transparent 55%),
+      var(--bg); color:var(--ink); font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px}
-    .hero{
-      background:var(--card);
-      border:1px solid var(--ring);
-      box-shadow:var(--shadow);
-      border-radius:var(--radius);
-      padding:22px;
-    }
-    .imgwrap{
-      background:#053152 url('stichcare-hero.png?v=3') center/contain no-repeat;
-      height:180px;border-radius:12px;border:1px solid #0b3448;
-      margin:-8px -8px 20px -8px;
-    }
-    h1{font-size:clamp(28px,4.5vw,44px);line-height:1.1;margin:8px 0 10px;color:#26ff87}
-    h2{font-size:clamp(18px,2.6vw,24px);font-weight:800;letter-spacing:.3px;color:#9ad6ff;margin:0 0 18px}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 22px}
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      background:#0b2138;border:1px solid #163a55;border-radius:999px;
-      padding:8px 14px;color:#cfe8ff;font-weight:600;font-size:14px;
-    }
-    .lead{
-      background:#0c1730;border:1px solid #163a55;border-radius:12px;
-      padding:18px;color:#d6e7ff;line-height:1.55;font-size:17px;
-    }
+    .wrap{max-width:1100px;margin:0 auto;padding:22px}
+    .hero{background:var(--card);border:1px solid var(--ring);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    .imgwrap{background:#053152 url('stichcare-hero.png?v=4') center/contain no-repeat;height:170px;border-radius:12px;border:1px solid #0b3448;margin:-6px -6px 18px}
+    h1{font-size:clamp(26px,4.2vw,40px);line-height:1.1;margin:8px 0 8px;color:#26ff87}
+    h2{font-size:clamp(16px,2.4vw,22px);font-weight:800;letter-spacing:.2px;color:#9ad6ff;margin:0 0 16px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 16px}
+    .chip{display:inline-flex;align-items:center;background:#0b2138;border:1px solid #163a55;border-radius:999px;padding:8px 12px;color:#cfe8ff;font-weight:700;font-size:13px}
 
-    /* Bottom actions */
-    .actions{
-      position:sticky;bottom:0;left:0;right:0;
-      background:linear-gradient(180deg, rgba(0,12,24,0) 0%, rgba(0,12,24,.65) 30%, rgba(0,12,24,.95) 100%);
-      padding:14px 16px 18px;border-top:1px solid #0f2338;backdrop-filter: blur(6px);
-    }
-    .bar{display:flex;flex-wrap:wrap;gap:12px}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:10px 14px;border-radius:12px;border:1px solid transparent;
-      font-weight:700;font-size:14px;line-height:1;color:#061626;
-      transition:transform .06s ease; user-select:none;
-    }
+    /* Accordion (aufklappen) */
+    .accordion{display:grid;gap:12px;margin-top:8px}
+    details{background:#0c1730;border:1px solid #163a55;border-radius:12px;overflow:hidden}
+    summary{list-style:none;cursor:pointer;padding:12px 16px;font-weight:800;color:#cfe8ff;position:relative}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"▾";position:absolute;right:14px;top:12px;transition:.2s transform}
+    details[open] summary:after{transform:rotate(180deg)}
+    .body{padding:0 16px 14px;color:#d6e7ff;line-height:1.6;font-size:15.5px}
+
+    footer{margin:18px 0 90px;font-size:13px;color:var(--muted)}
+
+    /* Bottom actions – kompakt */
+    .actions{position:sticky;bottom:0;left:0;right:0;
+      background:linear-gradient(180deg,rgba(0,12,24,0) 0,rgba(0,12,24,.7) 28%,rgba(0,12,24,.96) 100%);
+      padding:10px 12px 12px;border-top:1px solid #0f2338;backdrop-filter:blur(6px)}
+    .bar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    @media (min-width:520px){.bar{grid-template-columns:repeat(3,1fr)}}
+    @media (min-width:860px){.bar{grid-template-columns:repeat(5,1fr)}}
+    .btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;
+      padding:8px 12px;border-radius:10px;border:1px solid transparent;font-weight:800;
+      font-size:13px;line-height:1;color:#061626;user-select:none;white-space:nowrap}
     .btn:active{transform:translateY(1px)}
     .btn.whatsapp{background:linear-gradient(180deg,#18c173,#0fa25c); color:#012819; border-color:#0a8a50}
     .btn.mail{background:linear-gradient(180deg,#1aa8ff,#0c7fcc); color:#00131e; border-color:#0a6fb3}
     .btn.copy{background:#0e2a4a;color:#d8ebff;border-color:#16426d}
     .btn.fb{background:#1877f2;color:#fff;border-color:#0f5fc5}
     .btn.in{background:#0a66c2;color:#fff;border-color:#084e97}
-    .btn svg{width:18px;height:18px;fill:currentColor}
-
-    footer{margin-top:22px;font-size:13px;color:var(--muted)}
+    .btn svg{width:16px;height:16px;fill:currentColor}
   </style>
 </head>
 <body>
@@ -98,25 +80,45 @@
         <span class="chip">Vorbeugend gegen neue Stiche</span>
       </div>
 
-      <div class="lead">
-        <strong>StichCare</strong> lindert Juckreiz, Schwellung und Rötung innerhalb von Sekunden.
-        Die Formulierung basiert auf bewährter Antiseptik und ist mit hautberuhigenden sowie
-        feuchtigkeitsspendenden Komponenten kombiniert. Sie hilft, die <em>Hautbarriere</em> zu schützen
-        und wirkt zusätzlich <strong>vorbeugend gegen neue Insektenstiche</strong>.
+      <!-- Aufklappbare Bereiche -->
+      <div class="accordion">
+        <details open>
+          <summary>Kurzübersicht</summary>
+          <div class="body">
+            <strong>StichCare</strong> lindert Juckreiz, Schwellung und Rötung innerhalb von Sekunden.
+            Die bewährte Antiseptik-Basis wird mit hautberuhigenden & feuchtigkeitsspendenden
+            Komponenten kombiniert, hilft die <em>Hautbarriere</em> zu schützen und wirkt
+            <strong>vorbeugend gegen neue Insektenstiche</strong>.
+          </div>
+        </details>
+
+        <details>
+          <summary>Wirkprinzip</summary>
+          <div class="body">
+            • <b>Desinfektion:</b> Reinigt die Einstichstelle und reduziert das Risiko von Irritationen.<br/>
+            • <b>Hautberuhigung:</b> Mildert akuten Juckreiz, Rötung und Brennen.<br/>
+            • <b>Schutz:</b> Bildet eine sanfte, schützende Schicht und unterstützt die Regeneration.
+          </div>
+        </details>
+
+        <details>
+          <summary>Anwendung</summary>
+          <div class="body">
+            Betroffene Stelle vorsichtig reinigen, eine dünne Schicht auftragen und kurz einwirken lassen.
+            Bei Bedarf 2–3× täglich wiederholen. Für Kinder geeignet – nicht in die Augen bringen.
+          </div>
+        </details>
       </div>
     </section>
 
-    <footer>
-      © StichCare Innovations – Ivica Vasiljevic
-    </footer>
+    <footer>© StichCare Innovations – Ivica Vasiljevic</footer>
   </main>
 
-  <!-- Sticky Actions (unten) -->
+  <!-- Kompakte Button-Leiste unten -->
   <div class="actions">
     <div class="wrap" style="padding:0">
       <div class="bar">
         <a class="btn whatsapp" id="waBtn" href="#" target="_blank" rel="noopener">
-          <!-- WA icon -->
           <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.86 11.86 0 0 0 12 0C5.39 0 0 5.39 0 12c0 2.11.55 4.15 1.59 5.96L0 24l6.2-1.62A11.93 11.93 0 0 0 12 24c6.61 0 12-5.39 12-12 0-3.2-1.25-6.2-3.48-8.52ZM12 22a10 10 0 0 1-5.1-1.4l-.37-.22-3.64.95.97-3.55-.24-.38A9.97 9.97 0 1 1 22 12 10 10 0 0 1 12 22Zm5.46-7.53c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.41-1.5-.89-.79-1.5-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.05 1.03-1.05 2.51s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.17 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.41.25-.7.25-1.29.17-1.41-.08-.12-.27-.2-.57-.35Z"/></svg>
           WhatsApp
         </a>
@@ -149,22 +151,16 @@
     const PHONE = "004368181223766";
     const EMAIL = "ici77@live.at";
 
-    // Share texts
     const msg = encodeURIComponent("Hallo Ivica, ich interessiere mich für StichCare – Soforthilfe & Schutz.");
     const full = encodeURIComponent(PAGE_URL);
 
-    // Buttons
     document.getElementById("waBtn").href = `https://wa.me/${PHONE.replace(/^00/,"")}?text=${msg}%20${full}`;
     document.getElementById("mailBtn").href = `mailto:${EMAIL}?subject=StichCare%20Anfrage&body=${msg}%0A${PAGE_URL}`;
 
     document.getElementById("copyBtn").addEventListener("click", async () => {
-      try{
-        await navigator.clipboard.writeText(PAGE_URL);
-        const btn = document.getElementById("copyBtn");
-        const old = btn.textContent.trim();
-        btn.textContent = "Kopiert!";
-        setTimeout(()=>btn.textContent = old, 1200);
-      }catch(e){ alert("Konnte den Link nicht kopieren."); }
+      try{ await navigator.clipboard.writeText(PAGE_URL);
+        const b=document.getElementById("copyBtn");const t=b.textContent;b.textContent="Kopiert!";setTimeout(()=>b.textContent=t,1100);
+      }catch{ alert("Konnte den Link nicht kopieren."); }
     });
 
     document.getElementById("fbBtn").href = `https://www.facebook.com/sharer/sharer.php?u=${full}`;
