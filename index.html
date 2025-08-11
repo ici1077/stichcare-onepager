@@ -1,152 +1,121 @@
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>StichCare – Soforthilfe & Schutz</title>
-  <meta name="description" content="StichCare – Desinfiziert, beruhigt und hilft vorbeugend gegen neue Insektenstiche. Von Ivica Vasiljevic. Schnelle Linderung in Sekunden." />
-  <meta name="theme-color" content="#0b1220" />
-
-  <!-- Social Preview -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ici1077.github.io/stichcare-onepager/" />
-  <meta property="og:title" content="StichCare – Soforthilfe & Schutz" />
-  <meta property="og:description" content="Dual-Action: desinfiziert, beruhigt & hilft vorbeugend gegen neue Stiche." />
-  <meta property="og:image" content="https://ici1077.github.io/stichcare-onepager/stichcare-hero.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <style>
-    :root{
-      --bg:#0b1220; --panel:#0f172a; --ring:#1f2937; --text:#e5e7eb; --muted:#9aa3af;
-      --acc:#22c55e; --blue:#2563eb; --wa:#25D366; --mail:#16a34a; --fb:#1877F2; --li:#0A66C2;
-      --radius:14px; --shadow:0 12px 32px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif; color:var(--text);
-      background:
-        radial-gradient(900px 600px at 15% 0%, rgba(34,197,94,.12), transparent 60%),
-        radial-gradient(900px 600px at 85% 15%, rgba(37,99,235,.12), transparent 60%),
-        #0b1220;
-      display:flex; flex-direction:column;
-    }
-    .wrap{max-width:1100px; width:100%; margin:0 auto; padding:24px 18px 96px; flex:1 0 auto;}
-    header{text-align:center}
-    header img{max-width:320px; width:80%; height:auto; border-radius:12px; box-shadow:var(--shadow); border:1px solid var(--ring)}
-    h1{margin:14px 0 6px; font-size:clamp(26px,4.2vw,40px); color:var(--acc)}
-    .badges{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:10px 0 16px}
-    .badge{font-size:12px; font-weight:700; padding:6px 10px; border-radius:999px; border:1px solid var(--ring); background:#0d1a2f}
-    .panel{margin:18px auto 0; background:linear-gradient(180deg,#0f172a,#0c1629); border:1px solid var(--ring); border-radius:var(--radius); padding:18px; max-width:900px; box-shadow:var(--shadow)}
-    .lead{color:var(--text); margin:0 0 6px; font-weight:600}
-    .muted{color:var(--muted)}
-    /* Ausklapp-Text */
-    .more{max-height:0; overflow:hidden; transition:max-height .4s ease}
-    .more.open{max-height:900px}
-    .toggle{display:inline-block; margin-top:8px; padding:8px 12px; border-radius:8px; border:1px solid var(--ring); background:#0b1c2f; color:var(--text); cursor:pointer; font-weight:700}
-    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:14px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-    .card{background:#101a30; border:1px solid var(--ring); border-radius:12px; padding:14px}
-    .card h3{margin:0 0 6px; color:var(--acc); font-size:18px}
-
-    /* Footer / Buttons klein & unten */
-    footer{position:sticky; bottom:0; background:linear-gradient(180deg,#0c162a,#0a1323); border-top:1px solid var(--ring)}
-    .footwrap{max-width:1100px; margin:0 auto; padding:10px 12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between}
-    .small{font-size:12px; color:var(--muted)}
-    .btns{display:flex; gap:8px; flex-wrap:wrap}
-    .btn{display:inline-flex; align-items:center; gap:6px; height:34px; padding:0 10px; border-radius:8px; border:1px solid var(--ring); font-weight:700; font-size:13px; color:#fff}
-    .btn:hover{filter:brightness(1.08)}
-    .wa{background:#0b332f; border-color:#0d8f79}
-    .mail{background:#0b2f1a; border-color:#1a9b5a}
-    .copy{background:#0b1220; border-color:#334155}
-    .fb{background:#0b1b4a; border-color:#2563eb}
-    .li{background:#072533; border-color:#0ea5e9}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StichCare – Soforthilfe & Schutz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1b2a;
+            color: white;
+            text-align: center;
+        }
+        .logo img {
+            width: 80%;
+            max-width: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #00ff66;
+            font-size: 1.8em;
+            margin-top: 15px;
+        }
+        h2 {
+            color: #00ff99;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .tags {
+            margin: 15px 0;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #102542;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            border: 1px solid #1e3a5f;
+        }
+        .description {
+            background-color: #16213e;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px;
+            font-size: 1em;
+            line-height: 1.5em;
+            text-align: left;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .whatsapp { background-color: #25D366; }
+        .email { background-color: #1E7A34; }
+        .copy { background-color: #222; border: 1px solid #555; }
+        .facebook { background-color: #1877F2; }
+        .linkedin { background-color: #0A66C2; }
+        footer {
+            font-size: 0.8em;
+            color: #ccc;
+            margin-top: 15px;
+            padding-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
-  <main class="wrap">
-    <header>
-      <img src="stichcare-hero.png" alt="StichCare – Soforthilfe & Schutz" />
-      <h1>StichCare – Soforthilfe & Schutz</h1>
-      <div class="badges">
-        <span class="badge">Dual-Action: Desinfektion + Hautberuhigung</span>
-        <span class="badge">Schnelle Linderung in Sekunden</span>
-        <span class="badge">Vorbeugend gegen neue Stiche</span>
-      </div>
-    </header>
 
-    <section class="panel">
-      <p class="lead">Von Ivica Vasiljevic – innovatives Produkt für schnelle Hilfe bei Insektenstichen.</p>
-      <p class="muted">
-        StichCare lindert Juckreiz, Schwellung und Rötung innerhalb von Sekunden. Die Formulierung auf bewährter
-        Antiseptik-Basis wird mit hautberuhigenden und feuchtigkeitsspendenden Komponenten kombiniert und hilft
-        zusätzlich, eine schützende Barriere aufzubauen – für Komfort jetzt und vorbeugenden Schutz danach.
-      </p>
-
-      <!-- Ausklappbarer Langtext -->
-      <div id="more" class="more">
-        <p class="muted">
-          <strong>Anwendung:</strong> Bereich reinigen, geringe Menge auftragen, kurz einziehen lassen.
-          Ideal für unterwegs (Reise, Outdoor, Familie). Hautfreundliche Ausrichtung – geeignet für Kinder und empfindliche Haut.*
-        </p>
-        <p class="muted">
-          <strong>Vorteile im Überblick:</strong> Schnelle Linderung, einfache Anwendung, angenehmes Hautgefühl, potenziell
-          kosmetischer/OTC-Weg je nach finaler Rezeptur und Marktanforderungen. Herstellung lässt sich unkompliziert in bestehende Linien integrieren.
-        </p>
-        <p class="muted" style="font-size:12px">
-          * Hinweise: Endgültige Kennzeichnung/Claims (z. B. „repellent“) hängen von Zusammensetzung & lokalen Vorgaben ab.
-        </p>
-      </div>
-      <button id="toggle" class="toggle" aria-expanded="false">Mehr anzeigen</button>
-
-      <!-- Key Benefits -->
-      <div class="grid" style="margin-top:16px">
-        <div class="card">
-          <h3>Sofortige Linderung</h3>
-          <p class="muted">Reduziert Juckreiz, Schwellung & Rötung in Sekunden.</p>
-        </div>
-        <div class="card">
-          <h3>Schutz & Komfort</h3>
-          <p class="muted">Hilft die Hautbarriere zu schützen; angenehm für sensible Haut.</p>
-        </div>
-        <div class="card">
-          <h3>Einfach & familientauglich</h3>
-          <p class="muted">Praktisch für Kinder & Erwachsene; ideal für Reise & Outdoor.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer mit kleinen Buttons ganz unten -->
-  <footer>
-    <div class="footwrap">
-      <div class="small">© StichCare Innovations – Ivica Vasiljevic</div>
-      <div class="btns">
-        <a class="btn wa" href="https://wa.me/4368181223766" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn mail" href="mailto:ici77@live.at?subject=StichCare%20Anfrage">E-Mail</a>
-        <a class="btn copy" href="#" onclick="copyLink();return false;">Link kopieren</a>
-        <a class="btn fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fici1077.github.io%2Fstichcare-onepager%2F" target="_blank" rel="noopener">Facebook</a>
-        <a class="btn li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fici1077.github.io%2Fstichcare-onepager%2F" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="stichcare-hero.png?v=2" alt="StichCare Logo">
     </div>
-  </footer>
 
-  <script>
-    // Mehr anzeigen / Weniger anzeigen
-    const more = document.getElementById('more');
-    const toggle = document.getElementById('toggle');
-    toggle.addEventListener('click', () => {
-      const opened = more.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
-      toggle.textContent = opened ? 'Weniger anzeigen' : 'Mehr anzeigen';
-    });
+    <!-- Titel -->
+    <h1>StichCare – Soforthilfe & Schutz</h1>
+    <h2>Von Ivica Vasiljevic – Innovatives Produkt</h2>
 
-    // Link kopieren
-    function copyLink(){
-      const url = 'https://ici1077.github.io/stichcare-onepager/';
-      navigator.clipboard?.writeText(url).then(()=>alert('Link kopiert!')).catch(()=>prompt('Link kopieren:', url));
-    }
-  </script>
+    <!-- Vorteil-Tags -->
+    <div class="tags">
+        <span class="tag">Dual-Action: Desinfektion + Hautberuhigung</span>
+        <span class="tag">Schnelle Linderung in Sekunden</span>
+        <span class="tag">Vorbeugend gegen neue Stiche</span>
+    </div>
+
+    <!-- Beschreibung -->
+    <div class="description">
+        <strong>Von Ivica Vasiljevic – innovatives Produkt für schnelle Hilfe bei Insektenstichen.</strong><br><br>
+        StichCare lindert Juckreiz, Schwellung und Rötung innerhalb von Sekunden. Die Formulierung auf bewährter Antiseptik-Basis wird mit hautberuhigenden und feuchtigkeitsspendenden Komponenten kombiniert und hilft, die Hautbarriere zu schützen. Zusätzlich wirkt es vorbeugend gegen neue Insektenstiche.
+    </div>
+
+    <!-- Kontakt-Buttons -->
+    <div class="buttons">
+        <a class="whatsapp" href="https://wa.me/4368181223766" target="_blank">WhatsApp</a>
+        <a class="email" href="mailto:ici77@live.at">E-Mail</a>
+        <a class="copy" href="#" onclick="navigator.clipboard.writeText(window.location.href)">Link kopieren</a>
+        <a class="facebook" href="https://facebook.com" target="_blank">Facebook</a>
+        <a class="linkedin" href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © StichCare Innovations – Ivica Vasiljevic
+    </footer>
+
 </body>
 </html>
