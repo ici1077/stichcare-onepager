@@ -2,54 +2,56 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>StichCare – Instant Relief for Insect Bites</title>
-  <meta name="description" content="Dual-action: disinfection + skin soothing. Fast relief from insect bites within seconds. Safe for kids and sensitive skin." />
-  <meta property="og:title" content="StichCare – Instant Relief for Insect Bites" />
-  <meta property="og:description" content="Dual-action: disinfection + skin soothing. Fast, lasting relief." />
-  <style>
-    :root{--bg:#0f172a;--card:#111827;--text:#e5e7eb;--accent:#22c55e}
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0b1220;background:linear-gradient(180deg,#0b1220,#0f172a);color:var(--text)}
-    .wrap{max-width:980px;margin:auto;padding:24px}
-    .hero{display:grid;gap:16px;padding:32px;border:1px solid #172554;background:radial-gradient(1200px 600px at 10% -10%,rgba(34,197,94,.15),transparent),rgba(17,24,39,.6);border-radius:18px}
-    h1{margin:0;font-size:clamp(26px,5vw,44px);line-height:1.1}
-    .tag{display:inline-block;background:#052e16;border:1px solid #166534;color:#86efac;padding:6px 10px;border-radius:999px;font-size:14px}
-    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
-    .btn{padding:12px 16px;border-radius:12px;border:1px solid #1f2937;background:#16a34a;color:#04130a;font-weight:700;text-decoration:none}
-    .btn.ghost{background:transparent;color:var(--text);border-color:#334155}
-    .grid{display:grid;gap:14px;margin-top:28px}
-    @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .card{background:rgba(17,24,39,.65);border:1px solid #1f2937;border-radius:14px;padding:16px}
-    .card h3{margin:0 0 6px;font-size:18px}
-    .muted{opacity:.8}
-    footer{opacity:.7;font-size:14px;margin-top:28px}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>StichCare – Instant Relief for Insect Bites</title>
+<meta name="description" content="Dual-action: disinfects + soothes. Fast relief within seconds. Safe for kids and sensitive skin." />
+<style>
+:root{--bg:#0b1220;--card:#111a27;--text:#e6eef9;--muted:#9aa7bf;--acc:#22c55e}
+*{box-sizing:border-box} html,body{margin:0;height:100%}
+body{font:16px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 600px at 10% -10%,rgba(34,197,94,.15),transparent 60%),#0b1220}
+.wrap{max-width:1000px;margin:0 auto;padding:28px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;box-shadow:0 10px 35px rgba(0,0,0,.35)}
+.hero{display:grid;gap:16px;padding:28px;border:1px solid #172554;background:
+linear-gradient(160deg,rgba(2,6,23,.2),transparent),url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 120"><g fill="none" stroke="%235e7e9b" stroke-opacity=".25"><circle cx="60" cy="60" r="58"/><circle cx="170" cy="60" r="58"/><circle cx="280" cy="60" r="58"/></g><g fill="%23e6eef9" font-family="Segoe UI,Roboto" font-size="12"><text x="24" y="22">Apply StichCare</text><text x="144" y="22">Insect Bites</text><text x="250" y="22">Immediate Relief</text></g></svg>') center/cover no-repeat}
+.tag{display:inline-block;padding:6px 10px;border:1px solid #2a3345;border-radius:999px;background:#052e16;color:#9be7a5;font:600 12px/1 system-ui;letter-spacing:.3px}
+h1{margin:0;font-size:clamp(26px,4vw,36px);line-height:1.1}
+.muted{color:var(--muted)} .cta{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+.btn{padding:.85rem 1rem;border-radius:12px;border:1px solid #163a4a}
+.btn.primary{background:linear-gradient(160deg,#10b981,#059669);border-color:#0ea5a3}
+.btn.ghost{background:transparent;color:var(--text);border-color:#334155}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.card-sm{padding:18px;border:1px solid #1f2937;border-radius:12px}
+.card-sm h3{margin:0 0 6px;font-size:17px} .card-sm p{margin:0;color:var(--muted);font-size:15px}
+footer{padding:16px;text-align:center;color:#90a3bf;font-size:13px}
+a{text-decoration:none;color:inherit} a:hover{opacity:.9}
+</style>
 </head>
 <body>
   <div class="wrap">
-    <div class="hero">
+    <div class="hero card">
       <span class="tag">Dual-action: Disinfection + Skin Soothing</span>
       <h1>StichCare – Instant Relief for Mosquito & Insect Bites</h1>
-      <p class="muted">Fast-acting topical solution combining a trusted disinfectant base with skin-calming and hydrating agents. Noticeable relief within seconds. Safe for children and sensitive skin.</p>
-      <div class="cta-row">
-        <a class="btn" href="mailto:ici77@live.at?subject=StichCare%20Inquiry">Contact / Request info</a>
+      <p><strong>by Ivica Vasiljevic – Innovative Product</strong></p>
+      <p class="muted">Fast-acting topical solution combining a trusted disinfectant base with skin-calming and hydrating agents. Noticeable relief within seconds.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:ici77@live.at?subject=StichCare%20Inquiry">Contact / Request info</a>
         <a class="btn ghost" href="#benefits">See benefits</a>
       </div>
     </div>
 
     <div id="benefits" class="grid">
-      <div class="card"><h3>Immediate relief</h3><p class="muted">Reduces itching, swelling and redness within seconds.</p></div>
-      <div class="card"><h3>Proven base</h3><p class="muted">Built on a widely used antiseptic hand-rub foundation.</p></div>
-      <div class="card"><h3>Skin-friendly</h3><p class="muted">Soothing and moisturizing agents protect sensitive skin.</p></div>
-      <div class="card"><h3>Kids & adults</h3><p class="muted">Dermatologically suitable; ideal for families and travel kits.</p></div>
-      <div class="card"><h3>Non-pharma route*</h3><p class="muted">Can be positioned as a cosmetic/OTC depending on formula.</p></div>
-      <div class="card"><h3>Manufacturing-ready</h3><p class="muted">Simple to produce and integrate into existing product lines.</p></div>
+      <div class="card-sm card"><h3>Immediate relief</h3><p>Reduces itching, swelling & redness within seconds.</p></div>
+      <div class="card-sm card"><h3>Proven base</h3><p>Built on a widely used antiseptic hand-rub foundation.</p></div>
+      <div class="card-sm card"><h3>Skin-friendly</h3><p>Soothing & moisturizing agents protect sensitive skin.</p></div>
+      <div class="card-sm card"><h3>Kids & adults</h3><p>Safe for children and suitable for all skin types.</p></div>
+      <div class="card-sm card"><h3>Flexible path</h3><p>Cosmetic or OTC positioning (formula-dependent).</p></div>
+      <div class="card-sm card"><h3>Manufacturing-ready</h3><p>Simple to produce and integrate into product lines.</p></div>
     </div>
 
-    <footer>
-      *Regulatory pathway depends on final composition and market. © StichCare Innovations
-    </footer>
+    <footer>© 2025 Ivica Vasiljevic · StichCare Innovations · Regulatory pathway depends on composition and market.</footer>
   </div>
 </body>
 </html>
